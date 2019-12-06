@@ -1,0 +1,12 @@
+#version 330 core
+
+// Input vertex data, different for all executions of this shader.
+layout(location = 0) in vec3 inputPosition;
+
+// Output data ; will be interpolated for each fragment.
+out vec3 position;
+
+void main(){
+	gl_Position = vec4(inputPosition, 1.0);
+	position = inputPosition;
+}
